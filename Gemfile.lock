@@ -98,6 +98,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.1)
   jekyll-compose
+  jekyll-sitemap
   not-pure-poole!
   rake (~> 12.0)
 
