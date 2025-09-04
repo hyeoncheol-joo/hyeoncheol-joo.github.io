@@ -18,7 +18,7 @@ layout: default
 {%- if page.cv_keys and page.cv_keys.size > 0 -%}
   {%- assign cv_keys = page.cv_keys -%}
 {%- else -%}
-  {%- assign cv_keys = "education|work-experience|awards|activities|languages" | split: "|" -%}
+  {%- assign cv_keys = "download-cv|education|work-experience|awards|activities|languages" | split: "|" -%}
 {%- endif -%}
 
 {%- assign taxonomies = site.categories -%}
@@ -28,7 +28,6 @@ layout: default
     {%- assign posts = taxonomies[key] -%}
     {%- if posts and posts.size > 0 -%}
 
-      {%- comment -%} resume 카테고리만 보여주고 싶다면 페이지에 only_resume: true {%- endcomment -%}
       {%- if page.only_resume -%}
         {%- assign posts = posts | where_exp: "p", "p.categories contains 'resume'" -%}
       {%- endif -%}
@@ -40,9 +39,11 @@ layout: default
           <div class="post-list-by-taxonomy">
             {%- for post in posts -%}
               <article class="taxonomy-post">
-                <h2 class="taxonomy-post-title">
-                    {{ post.title | escape }}
-                </h2>
+                {%- unless key == 'download-cv' -%}
+                    <h2 class="taxonomy-post-title">
+                        {{ post.title | escape }}
+                    </h2>
+                {%- endunless -%}
                 <div class="taxonomy-post-content">
                   {{ post.content }}
                 </div>
