@@ -1,6 +1,6 @@
 ---
-layout: archive-taxonomies
+layout: archive-CV
 permalink: /categories/
-title: Categories
+title: CV
 type: categories
 ---

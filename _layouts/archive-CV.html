@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{% include home-header.html %}
+
+<h1>{{ page.title }}</h1>
+
+<!-- 페이지 파일(cv.md 등)에 쓴 본문을 상단 소개로 출력 -->
+<div class="page-intro">
+  {{ content }}
+</div>
+
+{%- comment -%}
+  CV에 보여줄 섹션 키(카테고리 이름) 순서 지정
+  페이지 프런트매터에 cv_keys: [education, work-experience, ...] 를 주면 그걸 사용.
+{%- endcomment -%}
+{%- if page.cv_keys and page.cv_keys.size > 0 -%}
+  {%- assign cv_keys = page.cv_keys -%}
+{%- else -%}
+  {%- assign cv_keys = "education|work-experience|awards|activities|languages" | split: "|" -%}
+{%- endif -%}
+
+{%- assign taxonomies = site.categories -%}
+
+<div class="cv-sections">
+  {%- for key in cv_keys -%}
+    {%- assign posts = taxonomies[key] -%}
+    {%- if posts and posts.size > 0 -%}
+
+      {%- comment -%} resume 카테고리만 보여주고 싶다면 페이지에 only_resume: true {%- endcomment -%}
+      {%- if page.only_resume -%}
+        {%- assign posts = posts | where_exp: "p", "p.categories contains 'resume'" -%}
+      {%- endif -%}
+
+      {%- if posts.size > 0 -%}
+        <section id="{{ key | slugify }}" class="cv-section">
+          
+
+          <div class="post-list-by-taxonomy">
+            {%- for post in posts -%}
+              <article class="taxonomy-post">
+                <h2 class="taxonomy-post-title">
+                    {{ post.title | escape }}
+                </h2>
+                <div class="taxonomy-post-content">
+                  {{ post.content }}
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+
+        </section>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+<script>
+  function backToTop() {
+    const main = document.getElementById("site-main") || document.documentElement;
+    main.scrollTop = 0;
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
