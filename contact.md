@@ -1,11 +1,15 @@
 ---
-layout: page
-title: Contact
+layout: archive-contact
 permalink: /contact/
+title: Contact
 ---
 
 
 
-You can reach me at <a href="mailto:wnguscjf01@gmail.com">wnguscjf01@gmail.com</a>.
+**Email**
 
+wnguscjf01 at gmail dot com
 
+**Phone**
+
+(+82) 10 5900 8757
