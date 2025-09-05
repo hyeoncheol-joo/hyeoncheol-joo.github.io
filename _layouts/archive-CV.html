@@ -18,7 +18,7 @@ layout: default
 {%- if page.cv_keys and page.cv_keys.size > 0 -%}
   {%- assign cv_keys = page.cv_keys -%}
 {%- else -%}
-  {%- assign cv_keys = "download-cv|education|work-experience|awards|activities|languages" | split: "|" -%}
+  {%- assign cv_keys = "cv" | split: "|" -%}
 {%- endif -%}
 
 {%- assign taxonomies = site.categories -%}
@@ -39,11 +39,6 @@ layout: default
           <div class="post-list-by-taxonomy">
             {%- for post in posts -%}
               <article class="taxonomy-post">
-                {%- unless key == 'download-cv' -%}
-                    <h2 class="taxonomy-post-title">
-                        {{ post.title | escape }}
-                    </h2>
-                {%- endunless -%}
                 <div class="taxonomy-post-content">
                   {{ post.content }}
                 </div>
