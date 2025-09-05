@@ -1,20 +1,7 @@
 ---
+layout: default
+title: About
 permalink: /
-layout: null
 ---
-{% assign dest = '/about/' | relative_url %}
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url={{ dest }}">
-    <link rel="canonical" href="{{ dest }}">
-    <script>
-      // JS fallback
-      window.location.replace("{{ dest }}");
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to <a href="{{ dest }}">{{ dest }}</a> …</p>
-  </body>
-</html>
+{%- assign about = site.pages | where: "permalink", "/about/" | first -%}
+{{ about.content | markdownify }}
