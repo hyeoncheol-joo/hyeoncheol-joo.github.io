@@ -2,6 +2,19 @@
 permalink: /
 layout: null
 ---
+{% assign dest = '/about/' | relative_url %}
 <!doctype html>
-<meta http-equiv="refresh" content="0; url={{ '/about/' | relative_url }}">
-<link rel="canonical" href="{{ '/about/' | relative_url }}">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ dest }}">
+    <link rel="canonical" href="{{ dest }}">
+    <script>
+      // JS fallback
+      window.location.replace("{{ dest }}");
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ dest }}">{{ dest }}</a> …</p>
+  </body>
+</html>
