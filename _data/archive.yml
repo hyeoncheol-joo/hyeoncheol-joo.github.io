@@ -1,9 +1,9 @@
-- type: dates
-  title: Dates
-  url: /dates/
-- type: categories
+- type: news
+  title: News
+  url: /news/
+- type: cv
   title: CV
-  url: /categories/
-- type: tags
+  url: /cv/
+- type: publications
   title: Publications
-  url: /tags/
+  url: /publications/

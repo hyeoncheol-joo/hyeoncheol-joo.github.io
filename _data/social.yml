@@ -7,3 +7,6 @@
 - title: GitHub
   url: https://github.com/hyeoncheol-joo
   icon: fab fa-github
+- title: Velog
+  url: https://velog.io/@busyhyeonchill/posts
+  icon: fas fa-pen-nib
