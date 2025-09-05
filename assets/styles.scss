@@ -52,3 +52,24 @@
     margin-left: var(--spacer);
   }
 }
+
+/* 화면 높이 채우기 */
+html, body { height: 100%; }
+
+/* 전체 레이아웃 컨테이너 */
+.container { min-height: 100vh; }
+
+/* 가운데 본문 칼럼을 세로 플렉스 컨테이너로 */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 본문 영역은 위쪽 공간을 차지 */
+.content > main { flex: 1 0 auto; }
+
+/* footer를 맨 아래로 밀기 */
+.content > .footer {
+  margin-top: auto;
+  padding-top: 0.75rem; /* 선택 */
+}
