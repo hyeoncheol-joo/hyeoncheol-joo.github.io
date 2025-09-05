@@ -5,5 +5,5 @@ categories: [resume, languages]
 permalink: /about/languages/
 ---
 
-- **Korean** — Native  
-- **English** — Intermediate
+- Korean — Native  
+- English — Intermediate

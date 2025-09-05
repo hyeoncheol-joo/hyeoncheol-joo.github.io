@@ -5,7 +5,7 @@ categories: [resume, work-experience]
 permalink: /about/work-experience/
 ---
 
-**Cryptography and Privacy Lab, SNU** — Undergraduate Intern (07/2025–08/2025)  
+Cryptography and Privacy Lab, SNU — Undergraduate Intern (07/2025–08/2025)  
 - Advised by Prof. Yongsoo Song
 
-**Cryptolab Inc. (Healthcare AI Division)** — Full/Part-time Intern (07/2024–02/2025)
+Cryptolab Inc. (Healthcare AI Division) — Intern (07/2024–02/2025)
