@@ -3,4 +3,4 @@ layout: home
 ---
 
 <h1>About</h1><hr>
-I am a senior undergraduate student at Korea University. I have a broad interest in information security and strive to gain experience in various fields. I am open-minded about my career path and aspire to pursue graduate studies in information security or cryptography in the future.
+I am an incoming graduate student studying cryptography and privacy-enhancing technologies, with a focus on homomorphic encryption. My goal is to advance foundational and applied research in secure and privacy-preserving computation.
