@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sudo apt update:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(python3:*)",
+      "Bash(pandoc:*)",
+      "Bash(unzip:*)"
+    ]
+  }
+}
