@@ -8,7 +8,7 @@ title: Contact
 
 **Email**
 
-wnguscjf01 at gmail dot com
+wnguscjf01@snu.ac.kr
 
 **Phone**
 

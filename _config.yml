@@ -6,7 +6,7 @@ avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
 # cover_image: /bg.jpeg
-cover_bg_color: "#495057"
+cover_bg_color: "#868e96"
 cover_color: "#dee2e6"
 
 # Gems
@@ -58,5 +58,5 @@ sass:
 author:
   name: Hyeoncheol Joo
   url: https://github.com/hyeoncheol-joo/
-  email: wnguscjf01@gmail.com
+  email: wnguscjf01@snu.ac.kr
 

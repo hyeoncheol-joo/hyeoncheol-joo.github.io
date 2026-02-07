@@ -14,12 +14,14 @@
 }
 
 .avatar-image {
-  width: 30%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  object-fit: contain;
+  background-color: white;
 }
 
 .masthead-title {
@@ -85,6 +87,7 @@
 
 @media (max-width: $md-width) {
   .avatar-image {
-    width: 15%;
+    width: 80px;
+    height: 80px;
   }
 }
