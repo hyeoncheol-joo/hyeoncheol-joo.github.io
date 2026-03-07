@@ -32,6 +32,18 @@
 
     <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
+    <script>
+      const sidebar = document.querySelector(".sidebar-left");
+      if (sidebar) {
+        sidebar.style.background = "linear-gradient(to bottom, #0c2d6b, #071a45)";
+        sidebar.style.color = "#d0ebff";
+      }
+      document.documentElement.style.setProperty("--body-color", "#0c2d6b");
+      document.documentElement.style.setProperty("--heading-color", "#0c2d6b");
+      document.documentElement.style.setProperty("--link-color", "#0c2d6b");
+      document.documentElement.style.setProperty("--link-hover-color", "#071a45");
+    </script>
+
     {%- include scroll.html -%}
 
     {%- if page.math -%}

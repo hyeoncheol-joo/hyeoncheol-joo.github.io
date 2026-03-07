@@ -34,10 +34,10 @@
 }
 
 .back-to-top {
-  display: block;
+  display: inline;
+  float: right;
   font-size: 0.8em;
   text-transform: uppercase;
-  text-align: right;
   text-decoration: none;
 }
 

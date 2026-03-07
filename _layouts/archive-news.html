@@ -29,15 +29,16 @@ layout: default
   </h2>
   <ul class="post-list-by-taxonomy">
     {%- assign posts = taxonomy.items -%}
+    {%- if taxonomy.name == "2026" -%}
+      {{ content }}
+    {%- endif -%}
     {%- for post in posts -%}
-      {%- assign target = post.url -%}
-      {%- if post.categories contains 'cv' -%}
-        {%- assign target = '/cv/' -%}
-      {%- endif -%}
+      {%- unless post.categories contains 'cv' -%}
       <li>
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-        &raquo; <a href="{{ target | relative_url }}">{{ post.title | escape }}</a>
+        &raquo; <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </li>
+      {%- endunless -%}
     {%- endfor -%}
   </ul>
   <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
