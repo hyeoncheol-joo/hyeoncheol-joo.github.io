@@ -5,7 +5,8 @@
       "Bash(sudo apt install:*)",
       "Bash(python3:*)",
       "Bash(pandoc:*)",
-      "Bash(unzip:*)"
+      "Bash(unzip:*)",
+      "Bash(bundle exec jekyll serve --incremental)"
     ]
   }
 }
